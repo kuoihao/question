@@ -6,12 +6,15 @@ SRC = main.cpp         # 源文件
 all: $(TARGET) run
 
 $(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $@ $<
+	@$(CXX) $(CXXFLAGS) -o $@ $<
 
 run: $(TARGET)
-	echo "-----------------------------\n"
-	./$(TARGET)
+	@./$(TARGET)
 	
 
 clean:
 	rm -f $(TARGET)
+
+
+
+# @echo "-----------------------------"加上@会使makefile会使这一句静默输出
