@@ -3,7 +3,6 @@ CXXFLAGS = -std=c++11  # 编译标准
 TARGET = main          # 目标可执行文件
 SRC = main.cpp         # 源文件
 INPUT_FILE = ../in    # 输入文件名
-OUTPUT_FILE = ../out  # 输出文件名
 
 all: $(TARGET) run
 
@@ -17,6 +16,3 @@ run: $(TARGET)
 clean:
 	rm -f $(TARGET)
 
-
-# @./$(TARGET) < ${INPUT_FILE} > ${OUTPUT_FILE}  输入输出重定向
-# @echo "-----------------------------"加上@会使makefile会使这一句静默输出

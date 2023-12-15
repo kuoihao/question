@@ -8,10 +8,10 @@ int main()
     cin >> num;
     double l = -10000, r = 10000;
 
-    while (r - l >= 0.000001)
+    while (r - l >= 0.0000001)
     {
         double mid = (l + r) / 2;
-        if (pow(mid, 3) > num)
+        if (pow(mid, 3) >= num)
         {
             r = mid;
         }
